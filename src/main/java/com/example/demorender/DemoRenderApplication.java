@@ -23,7 +23,7 @@ public class DemoRenderApplication {
         private String date;
     }
 
-    @Value("${MYSQL_DATABASE}")
+    @Value("${MYSQL_DATABASE:-unresolve}")
     private String MYSQL_DATABASE;
 
     @GetMapping("/")
