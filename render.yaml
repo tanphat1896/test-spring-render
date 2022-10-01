@@ -1,0 +1,14 @@
+services:
+- type: pserv
+  name: springdemo
+  plan: free
+  env: docker
+  autoDeploy: false
+  envVars:
+  - fromGroup: spring
+
+envVarGroups:
+- name: spring
+  envVars:
+  - key: MYSQL_DATABASE
+    value: mysql
